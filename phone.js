@@ -72,8 +72,21 @@ const displayPhones = (phones, dataLimit ) => {
     // spinner start
    processSearch(10)
 
-    searchField.value='';
+   
  });
+
+ document.getElementById('inputSearchField').addEventListener("keypress", function(e){
+    
+     if(e.key === "Enter"){
+
+        console.log('value')
+        
+       
+       
+       
+       }
+    
+ })
 //  spinner function
 
  const togleSpiner = isLoading => {
@@ -95,8 +108,9 @@ const displayPhones = (phones, dataLimit ) => {
     const searchFieldText = searchField.value;
 
     loadPhones(searchFieldText, dataLimit)
+    searchField.value='';
 
- }
+ } 
 
 
  //show all btn-function
